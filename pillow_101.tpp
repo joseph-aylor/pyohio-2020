@@ -60,25 +60,44 @@ An image has a size property that's a tuple of two numbers.
 
 There is a resize method on the Image object that allows you do define a new width and height.
 
-There is also a thumbnail method that keeps the original porportions intact, but makes sure it fits in the dimensions given.
+There is also a thumbnail method that keeps the original proportions intact, but makes sure it fits in the dimensions given.
 # make long
 # make wide
 # make tiny thumbnail
 --newpage
 --center Rotating Images
-rotate
-transpose
---newpage
---center Coordinate System
-pixel 0,0 is the upper left
+
+Rotating is done by the Image.rotate method.
+It take the number of degrees you want the image rotated.
+
+
+Transpose can do similar things, but only allows one of the following methods:
+FLIP_LEFT_RIGHT
+FLIP_TOP_BOTTOM
+ROTATE_90
+ROTATE_180
+ROTATE_270
+TRANSPOSE
+TRANSVERSE
 --newpage
 --center Cropping Images
---newpage
---center Histograms
+
+There is a crop method on the Image object.
+It takes 4 points: left, upper, right, lower
+
+The coordinate system of pillow starts with 0,0 being the top left
+So, the bottom left pixel could be addressed by (0, image.height)
+
 --newpage
 --center Copying and Pasting
 --newpage
 --center Image Filters
+--newpage
+--center Adding Text To Images
+
+--newpage
+--center Coordinate System
+pixel 0,0 is the upper left
 
 --newpage
 --center Bands
