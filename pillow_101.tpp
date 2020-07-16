@@ -86,23 +86,59 @@ There is a crop method on the Image object.
 It takes 4 points: left, upper, right, lower
 
 The coordinate system of pillow starts with 0,0 being the top left
-So, the bottom left pixel could be addressed by (0, image.height)
+So, the bottom left pixel could be addressed by (0, image.height - 1)
+
+# Bottom left corner
+# Bottom half
 
 --newpage
 --center Copying and Pasting
+You can paste one image into another.
+If you have two image objects, you can call .paste on the "Background" image.
+
+The paste method takes the image to be pasted along with either:
+  a tuple representing the upper left corner of where you want the pasted image to begin
+  a 4-tuple represnting the box you want the image pasted in (left, top, right, bottom)
+
+If you want to retain transparencies of pasted images, you need to pass a mask for the third parameter.
+You can also define a mask that's different than the pasted so that you can paste the image in a custom shape.
+# take big image
+# paste python logo in corner
+# paste python logo in center
+# paste python logo in center with transparency
+
+# MAYBE paste python lgoo in center in tiny rectangle
 --newpage
 --center Image Filters
+There are several image filters built in to pillow.
+You need to import ImageFilter from PIL
+
+The built in filters are:
+
+BLUR
+CONTOUR
+DETAIL
+EDGE_ENHANCE
+EDGE_ENHANCE_MORE
+EMBOSS
+FIND_EDGES
+SHARPEN
+SMOOTH
+SMOOTH_MORE
+
+There are also options to create your own filters.
+
 --newpage
 --center Adding Text To Images
 
---newpage
---center Coordinate System
-pixel 0,0 is the upper left
+
+
 
 --newpage
 --center Bands
 
 Bands allow an image to be broken down by color.
+There are also options to create your own filters.
 
 Call the get_channel method to get 
 Cover R G B and A
