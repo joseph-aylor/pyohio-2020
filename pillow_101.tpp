@@ -42,8 +42,6 @@ To open from bytes, pass in a BytesIO object from something like requests.
 Once you are ready to save an image to disk call the save method.
 
 Once you are done with an image, call the close method to remove it from memory.
-# open, show
-# download, BytesIO, show, save
 --newpage
 --center Converting Formats Formats
 
@@ -51,8 +49,6 @@ Converting between formats is as easy as using the correct file suffix.
 
 Be careful that if you have transparency in the image, you are converting to a format that can handle the transparency.
 You'll have to change the "mode" of the image.
-# tiff, ppm, jpg(fail)
-# change mode
 --newpage
 --center Resizing an Image
 
@@ -61,9 +57,6 @@ An image has a size property that's a tuple of two numbers.
 There is a resize method on the Image object that allows you do define a new width and height.
 
 There is also a thumbnail method that keeps the original proportions intact, but makes sure it fits in the dimensions given.
-# make long
-# make wide
-# make tiny thumbnail
 --newpage
 --center Rotating Images
 
@@ -88,9 +81,6 @@ It takes 4 points: left, upper, right, lower
 The coordinate system of pillow starts with 0,0 being the top left
 So, the bottom left pixel could be addressed by (0, image.height - 1)
 
-# Bottom left corner
-# Bottom half
-
 --newpage
 --center Copying and Pasting
 You can paste one image into another.
@@ -102,12 +92,7 @@ The paste method takes the image to be pasted along with either:
 
 If you want to retain transparencies of pasted images, you need to pass a mask for the third parameter.
 You can also define a mask that's different than the pasted so that you can paste the image in a custom shape.
-# take big image
-# paste python logo in corner
-# paste python logo in center
-# paste python logo in center with transparency
 
-# MAYBE paste python lgoo in center in tiny rectangle
 --newpage
 --center Image Filters
 There are several image filters built in to pillow.
@@ -127,6 +112,14 @@ SMOOTH
 SMOOTH_MORE
 
 There are also options to create your own filters.
+
+--newpage
+--center The End
+
+Thanks for watching.
+I hope you learned a bit about this useful library.
+
+The slides and code can be found at https://github.com/joseph-aylor/pillowtalk
 
 --newpage
 --center Adding Text To Images
