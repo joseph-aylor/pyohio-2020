@@ -48,7 +48,15 @@ Once you are done with an image, call the close method to remove it from memory.
 Converting between formats is as easy as using the correct file suffix.
 
 Be careful that if you have transparency in the image, you are converting to a format that can handle the transparency.
+
 You'll have to change the "mode" of the image.
+
+A mode is how the value of each pixel is handled.
+
+There are several, but most common are
+  RGB -> Each pixel contains a value for red, green, and blue
+  RGBA -> Each pixel contains a value for red, green, blue, and alpha (for transparencies)
+  L -> Each pixel contains a single value. When the image is shown it's in grayscale
 --newpage
 --center Resizing an Image
 
@@ -119,7 +127,7 @@ There are also options to create your own filters.
 Thanks for watching.
 I hope you learned a bit about this useful library.
 
-The slides and code can be found at https://github.com/joseph-aylor/pillowtalk
+The slides and code can be found at https://github.com/joseph-aylor/https://github.com/joseph-aylor/pyohio-2020
 
 --newpage
 --center Adding Text To Images
